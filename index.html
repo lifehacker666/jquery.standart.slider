@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="js/lib/jquery-1.11.0.min.js"></script>
+    <script src="jquery.standart.slider.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <!--[if lt IE 9]>
+    <script>
+        var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time,audio,video,canvas").split(',');
+        for (var i = 0; i < e.length; i++) {
+            document.createElement(e[i]);
+        }
+    </script>
+    <![endif]-->
+
+    <script>
+        $(function(){
+
+            $('.index_slider').standart_slider({
+                timeout: 12000,
+                time: 400,
+                timer: 1, /* Включение-выключение перелистывания */
+                size: 1, /* Количество отображаемых обьектов в окне показов */
+                type: 'scroll_horiz'
+            });
+
+            $('.tovar_slider').standart_slider({
+                timeout: 12000,
+                time: 400,
+                timer: 1, /* Включение-выключение перелистывания */
+                size: 1, /* Количество отображаемых обьектов в окне показов */
+                type: 'scroll_horiz'
+            });
+
+            $('.fade_slider').standart_slider({
+                timeout: 12000,
+                time: 400,
+                timer: 1, /* Включение-выключение перелистывания */
+                size: 1, /* Количество отображаемых обьектов в окне показов */
+                type: 'fade'
+            });
+
+            $('.resize_slider').standart_slider({
+                timeout: 12000,
+                time: 400,
+                timer: 1, /* Включение-выключение перелистывания */
+                size: 3, /* Количество отображаемых обьектов в окне показов */
+                type: 'scroll_horiz',
+                resize: 1
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+   <div id="overflow_div">
+       <div class="content-wraper">
+           <div class="content">
+
+               <div class="title">Слайдер на Главную</div>
+
+				<div class="standart_slider index_slider">
+                    <div class="viewport">
+                        <div class="overflower">
+                            <div class="item selected">
+                                <div class="img-container">
+                                    <img src="img/test1.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-container">
+                                    <img src="img/test2.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-container">
+                                    <img src="img/test3.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-container">
+                                    <img src="img/test4.jpg">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn helper"></div>
+                    </div>
+                    <div class="to_left"></div>
+                    <div class="to_right"></div>
+                </div>
+
+               <div class="title">Слайдер на страницу Товара</div>
+
+				<div class="tovar block">
+                    <div class="standart_slider tovar_slider">
+                        <div class="viewport">
+                            <div class="overflower">
+                                <div class="item selected">
+                                    <div class="img-container">
+                                        <img src="img/test1.jpg">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="img-container">
+                                        <img src="img/test2.jpg">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="img-container">
+                                        <img src="img/test3.jpg">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="img-container">
+                                        <img src="img/test4.jpg">
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <div class="item btn">
+                                <div class="img-container">
+                                    <img src="img/test1.jpg">
+                                </div>
+                            </div>
+                            <div class="item btn">
+                                <div class="img-container">
+                                    <img src="img/test2.jpg">
+                                </div>
+                            </div>
+                            <div class="item btn">
+                                <div class="img-container">
+                                    <img src="img/test3.jpg">
+                                </div>
+                            </div>
+                            <div class="item btn">
+                                <div class="img-container">
+                                    <img src="img/test4.jpg">
+                                </div>
+                            </div>
+                            <div class="item btn helper"></div>
+                        </div>
+                        <div class="to_left"></div>
+                        <div class="to_right"></div>
+                    </div>
+            	</div>
+
+               <div class="title">Слайдер с эффектом затухания</div>
+
+               <div class="standart_slider fade_slider">
+                   <div class="viewport">
+                       <div class="overflower">
+                           <div class="item selected">
+                               <div class="img-container">
+                                   <img src="img/test1.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test2.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test3.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="clear"></div>
+                       </div>
+                   </div>
+                   <div class="buttons">
+                       <div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn helper"></div>
+                   </div>
+                   <div class="to_left"></div>
+                   <div class="to_right"></div>
+               </div>
+
+           </div>
+       </div>
+   </div>
+
+   <div class="resize-overflow-div clearfix">
+       <div class="resize-content-wraper">
+           <div class="resize-content">
+               <div class="title">Резиновый слайдер</div>
+
+               <div class="standart_slider resize_slider">
+                   <div class="viewport">
+                       <div class="overflower">
+                           <div class="item selected">
+                               <div class="img-container">
+                                   <img src="img/test1.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test2.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test3.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="item selected">
+                               <div class="img-container">
+                                   <img src="img/test1.jpg">
+                               </div>
+                           </div>
+                           <div class="clear"></div>
+                       </div>
+                   </div>
+                   <div class="to_left"></div>
+                   <div class="to_right"></div>
+               </div>
+           </div>
+       </div>
+
+       <div class="resize-left-block">Левый блок</div>
+       <div class="resize-right-block">Правый</div>
+   </div>
+
+</body>
+</html>
