@@ -46,7 +46,6 @@ jQuery.fn.standart_slider = function(options){
         //для резинового слайдера пересчитываем величины
         if ( options.resize == 1) {
             $( window ).resize(function() {
-                //item_width = $item.width() + parseInt($item.css('marginRight'), 10) + parseInt($item.css('marginLeft'), 10) + parseInt($item.css('paddingRight'), 10) + parseInt($item.css('paddingLeft'), 10);
                 item_width = ($viewport.width() - (options.size - 1) * sigma_indents ) / (options.size);
                 $item.width(item_width);
                 $list.width((item_width + sigma_indents)*(item_cnt+1));
