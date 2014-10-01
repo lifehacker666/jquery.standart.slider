@@ -50,6 +50,7 @@ jQuery.fn.standart_slider = function(options){
                 item_width = ($viewport.width() - (options.size - 1) * sigma_indents ) / (options.size);
                 $item.width(item_width);
                 $list.width((item_width + sigma_indents)*(item_cnt+1));
+                $list.css('left', -(current_item - 1) * (item_width + sigma_indents));
             });
         }
 
