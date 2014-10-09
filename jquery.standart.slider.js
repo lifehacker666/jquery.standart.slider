@@ -152,9 +152,16 @@ jQuery.fn.standart_slider = function(options){
         $button.bind(options.action, function(e){
             if( options.timer )
                 clearInterval(cicle);
+
             current_item = $button.index(this)+1;
+
+            //условие для случая, когда слайдер отображает несколько item-ов и имеет кнопки пролистывания
+            if ( current_item > item_cnt - options.size ){
+                current_item = item_cnt + 1 - options.size;
+            }
+
             $button.removeClass(options.selected);
-            jQuery($button.eq(current_item-1)).addClass(options.selected);
+            jQuery($button.eq($button.index(this))).addClass(options.selected);
 
             $list.stop();
             animateType();

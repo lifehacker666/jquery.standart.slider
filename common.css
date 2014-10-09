@@ -485,6 +485,53 @@ html, body {
     margin: auto;
 }
 
+.resize_slider .buttons {
+    width: auto;
+    text-align: center;
+}
+
+.resize_slider .buttons .item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #6d6d6d;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.resize_slider .buttons .item:hover{
+    background: #66e3f1;
+}
+
+.resize_slider .buttons .item.selected {
+    background: #66e3f1;
+}
+
+/* Обнуляем шрифт и line-height у родителя*/
+.resize_slider .buttons{
+    /*text-align: justify;*/
+    line-height: 0;
+    font-size: 1px;
+}
+
+/* доп элемент для выравнивания по ширине */
+.resize_slider .buttons .item.helper {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.resize_slider .buttons .item{
+    /* Востанавливаем у потомков, кроме последнего*/
+    line-height: normal;
+    font-size: 12px;
+
+    /* Без него в Opera будет отступ под элементами */
+    vertical-align: top;
+}
+
 .resize_slider .to_left, .resize_slider .to_right{
     width: 20px;
     height: 20px;
