@@ -489,7 +489,22 @@ html, body {
 .double_slider .buttons {
     position: relative;
     width: 360px;
+    height: 60px;
     margin: 0 auto;
+}
+
+.double_slider .buttons .viewport{
+    width: 360px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.double_slider .buttons .boverflower {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1000%;
 }
 
 .double_slider .buttons .item {
@@ -499,6 +514,8 @@ html, body {
     overflow: hidden;
     background: #6d6d6d;
     cursor: pointer;
+    margin-right: 40px;
+    margin-left: 0; /*не работает без марджина*/
 }
 
 .double_slider .buttons .item .img-container{
@@ -527,31 +544,7 @@ html, body {
     background: #66e3f1;
 }
 
-/* Обнуляем шрифт и line-height у родителя*/
-.double_slider .buttons{
-    text-align: justify;
-    line-height: 0;
-    font-size: 1px;
-}
-
-/* доп элемент для выравнивания по ширине */
-.double_slider .buttons .item.helper {
-    width: 100%;
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
-}
-
-.double_slider .buttons .item{
-    /* Востанавливаем у потомков, кроме последнего*/
-    line-height: normal;
-    font-size: 12px;
-
-    /* Без него в Opera будет отступ под элементами */
-    vertical-align: top;
-}
-
-.double_slider .to_left, .double_slider .to_right{
+.double_slider .bto_left, .double_slider .bto_right{
     width: 20px;
     height: 20px;
     background: #6d6d6d;
@@ -561,15 +554,15 @@ html, body {
     margin-top: -10px;
 }
 
-.double_slider .to_left{
+.double_slider .bto_left{
     left: -20px;
 }
 
-.double_slider .to_right{
+.double_slider .bto_right{
     right:  -20px;
 }
 
-.double_slider .to_left:hover, .double_slider .to_right:hover{
+.double_slider .bto_left:hover, .double_slider .bto_right:hover{
     background: #66e3f1;
 }
 /*---------/DOUBLE SLIDER------------*/
