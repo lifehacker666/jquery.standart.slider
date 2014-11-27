@@ -1,4 +1,5 @@
 /**
+ * Standart Slider v1.0.1
  * @author Alexandr Belikh
  * @email zimovchanin@gmail.com
  */
