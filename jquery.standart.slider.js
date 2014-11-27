@@ -100,7 +100,7 @@ jQuery.fn.standart_slider = function(options){
 				clearInterval(cicle);
 			
 			event.preventDefault();
-			if( current_item == 1 ){
+			if( current_item <= 1 ){
 				current_item = item_cnt-options.size+1;// Зацикливаем
 			} else {
 				current_item--; //
@@ -113,7 +113,7 @@ jQuery.fn.standart_slider = function(options){
 			//}
 			
 			$button.removeClass(options.selected);
-			jQuery($button.eq(current_item-1)).addClass(options.selected);
+			jQuery($button.eq( Math.ceil((current_item - 1)/options.size)) ).addClass(options.selected);
 
             animateType();
 
@@ -131,7 +131,7 @@ jQuery.fn.standart_slider = function(options){
 				clearInterval(cicle);
 		
 			event.preventDefault();
-			if( current_item == item_cnt-options.size+1 ){
+			if( current_item >= item_cnt-options.size+1 ){
 				current_item = 1;// Зацикливаем
 			} else {
 				current_item++; // 
@@ -144,7 +144,7 @@ jQuery.fn.standart_slider = function(options){
 			//}
 			
 			$button.removeClass(options.selected);
-			jQuery($button.eq(current_item-1)).addClass(options.selected);
+			jQuery($button.eq( Math.ceil((current_item - 1)/options.size)) ).addClass(options.selected);
 
             animateType();
 
@@ -192,7 +192,7 @@ jQuery.fn.standart_slider = function(options){
 		});
 		
 		var interval = function(){
-			if( current_item == item_cnt-options.size+1 ){
+			if( current_item >= item_cnt-options.size+1 ){
 				current_item = 1;// Зацикливаем
 			} else {
 				current_item++; // 
@@ -204,7 +204,7 @@ jQuery.fn.standart_slider = function(options){
 			//	bcurrent_item++; // 
 			//}
 			$button.removeClass(options.selected);
-			jQuery($button.eq(current_item-1)).addClass(options.selected);
+			jQuery($button.eq( Math.ceil((current_item - 1)/options.size)) ).addClass(options.selected);
 
             animateType();
 		};
@@ -217,15 +217,15 @@ jQuery.fn.standart_slider = function(options){
             if( options.timer )
                 clearInterval(cicle);
 
-            current_item = $button.index(this)+1;
+            current_item = $button.index(this)*options.size+1;
 
-            //условие для случая, когда слайдер отображает несколько item-ов и имеет кнопки пролистывания
-            if ( current_item > item_cnt - options.size ){
-                current_item = item_cnt + 1 - options.size;
+            // Случай, когда перематывать элт-ы нужноне полностью (Если колв-во эл-тов > чем помещается в видимой части слайдера)
+            if( current_item > (item_cnt - options.size) ) {
+                current_item = item_cnt - options.size + 1;
             }
 
             $button.removeClass(options.selected);
-            jQuery($button.eq($button.index(this))).addClass(options.selected);
+            jQuery($button.eq($button.index(this) )).addClass(options.selected);
 
             $list.stop();
             animateType();

@@ -62,6 +62,14 @@
                 resize: 1
             });
 
+            $('.objects_slider').standart_slider({
+                timeout: 12000,
+                time: 400,
+                timer: 1, /* Включение-выключение перелистывания */
+                size: 3, /* Количество отображаемых обьектов в окне показов */
+                type: 'scroll_horiz'
+            });
+
         });
     </script>
 
@@ -294,6 +302,71 @@
 
                </div>
 
+               <div class="title">Слайдер с несколькими объектами на 1 слайде</div>
+               <div class="standart_slider objects_slider">
+                   <div class="viewport">
+                       <div class="overflower">
+                           <div class="item selected">
+                               1<br>
+                               <div class="img-container">
+                                   <img src="img/test1.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               2<br>
+                               <div class="img-container">
+                                   <img src="img/test2.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               3<br>
+                               <div class="img-container">
+                                   <img src="img/test3.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               4<br>
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               5<br>
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               6<br>
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               7<br>
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="item">
+                               8<br>
+                               <div class="img-container">
+                                   <img src="img/test4.jpg">
+                               </div>
+                           </div>
+                           <div class="clear"></div>
+                       </div>
+                   </div>
+                   <div class="buttons">
+                       <div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn"></div><!--
+                        --><div class="item btn helper"></div>
+                   </div>
+                   <div class="to_left"></div>
+                   <div class="to_right"></div>
+               </div>
+
            </div>
        </div>
    </div>
@@ -336,8 +409,6 @@
                    </div>
                    <div class="buttons">
                        <div class="item btn"></div><!--
-                        --><div class="item btn"></div><!--
-                        --><div class="item btn"></div><!--
                         --><div class="item btn"></div><!--
                         --><div class="item btn helper"></div>
                    </div>
