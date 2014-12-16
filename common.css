@@ -143,7 +143,7 @@ html, body {
     overflow: hidden;
     background: #6d6d6d;
     cursor: pointer;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 .index_slider .buttons .item:hover{
@@ -400,7 +400,7 @@ html, body {
     overflow: hidden;
     background: #6d6d6d;
     cursor: pointer;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 .fade_slider .buttons .item:hover{
@@ -630,7 +630,7 @@ html, body {
     overflow: hidden;
     background: #6d6d6d;
     cursor: pointer;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 .resize_slider .buttons .item:hover{
@@ -753,7 +753,7 @@ html, body {
     overflow: hidden;
     background: #6d6d6d;
     cursor: pointer;
-    margin-right: 5px;
+    margin: 0 5px;
 }
 
 .objects_slider .buttons .item:hover{
