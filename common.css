@@ -253,6 +253,7 @@ html, body {
 }
 
 .tovar_slider .viewport .item .img-container {
+    display: block;
     position: relative;
     margin: 0 auto;
     width: 360px;
