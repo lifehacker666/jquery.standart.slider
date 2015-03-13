@@ -533,13 +533,13 @@ html, body {
 .double_slider .buttons {
     position: relative;
     width: 360px;
-    height: 96px;
+    height: 90px;
     margin: 15px auto 0 auto;
 }
 
 .double_slider .buttons .viewport {
     width: 360px;
-    height: 96px;
+    height: 90px;
     overflow: hidden;
     position: relative;
 }
@@ -557,9 +557,9 @@ html, body {
     height: 90px;
     overflow: hidden;
     cursor: pointer;
-    margin-right: 35px;
-    border: 3px solid #b0c3bd;
+    margin-right: 45px;
     margin-left: 0; /*не работает без марджина*/
+    background: #b0c3bd;
 }
 
 .double_slider .buttons .item .img-container {
@@ -581,11 +581,11 @@ html, body {
 }
 
 .double_slider .buttons .item:hover {
-    border: 3px solid #869791;
+    background: #869791;
 }
 
 .double_slider .buttons .item.selected {
-    border: 3px solid #869791;
+    background: #869791;
 }
 
 .double_slider .bto_left, .double_slider .bto_right {
